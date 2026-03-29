@@ -1,0 +1,145 @@
+portfolio:
+  name: "Personal Portfolio"
+  base_currency: CHF
+  lookback_days: 30
+  news_lookback_days: 30
+
+  fx_pairs:
+    - pair: EURCHF
+      ticker: "EURCHF=X"
+    - pair: USDCHF
+      ticker: "USDCHF=X"
+
+  positions:
+    - id: europe_stoxx600
+      name: "Invesco STOXX Europe 600 UCITS ETF Acc"
+      ticker: "EXSA.DE"
+      asset_class: etf
+      region: Europe
+      currency: EUR
+      hedged: false
+      proxy_tickers: ["FEZ", "VGK"]
+      search_terms:
+        - "STOXX 600"
+        - "European stocks"
+        - "Euro zone economy"
+        - "ECB interest rates"
+      thesis: >
+        Diversified exposure to 600 large European companies. Natural
+        complement to S&P 500 to reduce US concentration. Long-term
+        valuation catch-up potential versus US markets.
+      bull_signals:
+        - Euro zone economic recovery
+        - ECB rate cuts
+        - EUR/CHF stable or favorable
+        - Rebound in European cyclicals
+      bear_signals:
+        - Euro zone recession
+        - Energy crisis in Europe
+        - Political instability in France or Italy
+        - EUR weakening sharply against CHF
+      risk_factors:
+        - EUR/CHF currency risk (not hedged)
+        - Exposure to cyclical sectors (banks, industrials)
+
+    - id: global_acwi_chf_hedged
+      name: "UBS ETF MSCI ACWI SF UCITS hedged to CHF"
+      ticker: "ACWIS.SW"
+      asset_class: etf
+      region: Global
+      currency: CHF
+      hedged: true
+      proxy_tickers: ["ACWI", "VT"]
+      search_terms:
+        - "MSCI ACWI"
+        - "global equities"
+        - "emerging markets"
+        - "China economy"
+        - "India growth"
+      thesis: >
+        Global exposure including emerging markets, with CHF hedge
+        protecting against USD and EUR fluctuations. Core portfolio
+        position capturing global growth without full currency risk.
+      bull_signals:
+        - Emerging market growth acceleration (China, India)
+        - Weak USD supporting EM assets
+        - Global geopolitical stability
+      bear_signals:
+        - Strong USD eroding EM returns
+        - China slowdown or property crisis
+        - Rising CHF hedge cost reducing returns
+      risk_factors:
+        - CHF hedge has a cost (basis risk)
+        - EM volatility can be significant
+        - Hedge effectiveness varies in stress scenarios
+
+    - id: sp500
+      name: "iShares Core S&P 500 UCITS ETF USD"
+      ticker: "CSPX.L"
+      asset_class: etf
+      region: USA
+      currency: USD
+      hedged: false
+      proxy_tickers: ["SPY", "VOO"]
+      search_terms:
+        - "S&P 500"
+        - "US economy"
+        - "Federal Reserve"
+        - "US corporate earnings"
+        - "Magnificent 7"
+      thesis: >
+        Exposure to the historical engine of global equity returns.
+        Long-term core holding, deliberately sized to avoid
+        overexposure to the US market and USD currency risk.
+      bull_signals:
+        - Strong US corporate earnings growth
+        - AI and tech sector expansion
+        - Resilient US labor market
+        - Fed pivoting dovish
+      bear_signals:
+        - US recession
+        - Multiple compression on high valuations
+        - USD strengthening hurting CHF returns
+        - Magnificent 7 earnings disappointment
+      risk_factors:
+        - Not hedged — direct USD/CHF exposure
+        - ~30% concentration in tech sector
+        - Elevated valuations (high P/E)
+
+    - id: gold
+      name: "Spot Gold"
+      ticker: "GC=F"
+      asset_class: commodity
+      region: Global
+      currency: USD
+      hedged: false
+      proxy_tickers: ["GC=F"]
+      search_terms:
+        - "gold price rally"
+        - "central bank gold buying"
+        - "gold safe haven"
+        - "Fed interest rates gold"
+        - "geopolitical risk gold"
+        - "GLD"
+        - "IAU"
+        - "XAU"
+      thesis: >
+        Long-term store of value and crisis hedge. Protection against
+        inflation, geopolitical instability, fiat currency devaluation,
+        and risk-off episodes. Low correlation to equities makes it a
+        genuine diversifier.
+      bull_signals:
+        - Geopolitical tensions escalating
+        - Persistent inflation
+        - Weak USD
+        - Central bank gold buying
+        - Equity market selloff or recession
+      bear_signals:
+        - Strong USD
+        - Rising real US interest rates
+        - Prolonged risk-on environment
+        - Geopolitical stabilization
+      risk_factors:
+        - No yield (no dividends or coupons)
+        - Can underperform significantly in equity bull markets
+        - USD-denominated — CHF/USD exposure

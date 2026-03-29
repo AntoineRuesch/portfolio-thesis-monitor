@@ -1,0 +1,23 @@
+# Environment — contains real API keys, never commit
+.env
+
+# Generated output — only the sample memo is tracked
+output/*
+!output/memo_sample.md
+!output/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code workspace config
+.claude/
