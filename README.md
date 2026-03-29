@@ -163,11 +163,10 @@ python report/memo_generator.py
 
 ## Roadmap
 
-- Slack or email delivery of the daily memo
-- Real portfolio weights via broker API integration (IBKR, Swissquote)
-- Live ETF holdings data for precise overlap calculation (ETF provider APIs)
-- Web UI for thesis management (add/edit/archive positions without editing YAML)
+- Automated daily scheduling (cron / GitHub Actions) so the memo is generated without manual runs
+- Live ETF holdings data for precise overlap calculation instead of hardcoded index composition
 - Thesis accuracy tracking over time — was REASSESS actually followed by underperformance?
+- Web UI for thesis management (add/edit/archive positions without editing YAML)
 
 ---
 
