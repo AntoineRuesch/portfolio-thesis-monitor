@@ -152,6 +152,7 @@ python report/memo_generator.py
 
 ## Limitations
 
+- Data coverage is limited and accuracy cannot be guaranteed — the system relies entirely on free-tier consumer APIs with daily quotas, incomplete ticker coverage, and no access to institutional data. Professional data providers such as Bloomberg or Refinitiv would deliver significantly higher data quality, broader coverage, and richer analytical options
 - No backtesting or historical validation of thesis accuracy — the system cannot tell you whether previous REASSESS verdicts were justified in hindsight
 - News coverage depends on free tier quotas; on days when all providers are quota-limited, news sections will be empty and thesis evaluations will default to ON TRACK
 - Equal weighting assumption may not reflect real allocation — currency and geographic exposure figures are indicative, not precise
